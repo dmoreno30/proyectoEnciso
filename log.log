@@ -1,0 +1,50 @@
+
+------------------------
+2024.03.16 13:53:05
+DEBUG
+Array
+(
+    [document_id] => Array
+        (
+            [0] => crm
+            [1] => CCrmDocumentDeal
+            [2] => DEAL_77
+        )
+
+    [auth] => Array
+        (
+            [domain] => corporativoenciso.bitrix24.es
+            [client_endpoint] => https://corporativoenciso.bitrix24.es/rest/
+            [server_endpoint] => https://oauth.bitrix.info/rest/
+            [member_id] => e97b405289daf10806d74eff91343b29
+        )
+
+)
+
+------------------------
+
+------------------------
+2024.03.16 13:58:52
+DEBUG
+Array
+(
+    [idContact] => 
+    [idCompany] => 
+    [document_id] => Array
+        (
+            [0] => crm
+            [1] => CCrmDocumentDeal
+            [2] => DEAL_77
+        )
+
+    [auth] => Array
+        (
+            [domain] => corporativoenciso.bitrix24.es
+            [client_endpoint] => https://corporativoenciso.bitrix24.es/rest/
+            [server_endpoint] => https://oauth.bitrix.info/rest/
+            [member_id] => e97b405289daf10806d74eff91343b29
+        )
+
+)
+
+------------------------
