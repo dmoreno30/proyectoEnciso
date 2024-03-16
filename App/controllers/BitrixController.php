@@ -2,22 +2,30 @@
 
 namespace Asesores\controllers;
 
-use Asesores\core\CRest;
+use Asesores\Model\ModelBitrix;
 
-class BitrixController
+class BitrixController extends ModelBitrix
 {
-	protected function dataOFEntity($id, $entity)
+	public $ModelBitrix;
+	public $id;
+	public $entity;
+
+	public function __construct()
 	{
-		$result = CRest::call(
-			"crm.$entity.get",
-			[
-				"id" => $id,
-			]
-		);
-		return $result;
+
+		$this->ModelBitrix = new ModelBitrix();
 	}
-	public function getData($id, $entity)
+
+	public function getDataDeal(int $id, string $entity)
 	{
-		return $this->dataOFEntity($id, $entity);
+		return $this->ModelBitrix->dataOfEntity($id, $entity);
+	}
+	public function getDataContact(int $id, string $entity)
+	{
+		return $this->ModelBitrix->dataOfEntity($id, $entity);
+	}
+	public function getDataCompany(int $id, string $entity)
+	{
+		return $this->ModelBitrix->dataOfEntity($id, $entity);
 	}
 }
