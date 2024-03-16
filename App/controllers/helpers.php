@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
+namespace Asesores\controllers;
 
-class LogRegister
+class helpers
 {
-    public function register($arr, $title = '')
+    public function LogRegister($arr, $title = '')
     {
         $log = "\n------------------------\n";
         $log .= date("Y.m.d G:i:s") . "\n";
@@ -14,9 +14,12 @@ class LogRegister
         file_put_contents(getcwd() . '\log.log', $log, FILE_APPEND);
         return true;
     }
-    public function formatPrint($arr)
+    public function FormatPrint($arr)
     {
-        return "<pre>" . print_r($arr) . "</pre>";
+        $info = "<pre>";
+        $info .= print_r($arr);
+        $info .= "</pre>";
+        return $info;
     }
     public function log_error($message)
     {

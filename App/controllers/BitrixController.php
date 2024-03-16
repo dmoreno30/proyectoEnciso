@@ -1,5 +1,8 @@
 <?php
-require_once($_SERVER["DOCUMENT_ROOT"] . 'proyectoEnciso\core\crest.php');
+
+namespace Asesores\controllers;
+
+use Asesores\core\CRest;
 
 class BitrixController
 {
