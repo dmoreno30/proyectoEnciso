@@ -1,14 +1,5 @@
 <?php
-require_once (__DIR__.'\core\crest.php');
-require_once (__DIR__.'\App\helpers.php');
-echo __DIR__;
-$logRegister = new LogRegister();
-$logRegister->register($_REQUEST);
-
-
-
-
-
-
-
-
+require_once(__DIR__ . '\App\BitrixController.php');
+$logRegister = new BitrixController();
+$data = $logRegister->getData($_REQUEST["idDeal"], "deal");
+print_r($data);

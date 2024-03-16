@@ -1,14 +1,20 @@
 <?php
-class BitrixController{
-   function ejecutarWorkflowAPI($template)
+require_once($_SERVER["DOCUMENT_ROOT"] . 'proyectoEnciso\core\crest.php');
+
+class BitrixController
 {
-	$result = CRest::call(
-		'bizproc.workflow.start',
-		[
-			"TEMPLATE_ID" => $template,
-			"DOCUMENT_ID" => ["crm", "CCrmDocumentContact", 391],
-		]
-	);
-	return $result;
-}
+	protected function dataOFEntity($id, $entity)
+	{
+		$result = CRest::call(
+			"crm.$entity.get",
+			[
+				"id" => $id,
+			]
+		);
+		return $result;
+	}
+	public function getData($id, $entity)
+	{
+		return $this->dataOFEntity($id, $entity);
+	}
 }
