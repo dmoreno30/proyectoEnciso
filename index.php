@@ -6,13 +6,13 @@ use Asesores\controllers\DataStructContronller;
 
 
 try {
-    $crm = new BitrixController();
+    $BitrixControllerCRM = new BitrixController();
 
-    $deal =  $crm->getDataDeal($_REQUEST["idDeal"], "deal");
-    $contact =  $crm->getDataDeal($_REQUEST["idContact"], "contact");
-    $company =  $crm->getDataDeal($_REQUEST["idCompany"], "company");
-
-    $structureData = new DataStructContronller($deal, $contact, $company);
+    $deal =  $BitrixControllerCRM->getDataCRM($_REQUEST["idDeal"], "deal");
+    $contact =  $BitrixControllerCRM->getDataCRM($_REQUEST["idContact"], "contact");
+    $company =  $BitrixControllerCRM->getDataCRM($_REQUEST["idCompany"], "company");
+    $Emailuser = $_REQUEST["userEmail"];
+    $datastruct = new DataStructContronller($deal, $contact, $company, $Emailuser);
 } catch (\Throwable $th) {
-    //throw $th;
+    throw $th;
 }

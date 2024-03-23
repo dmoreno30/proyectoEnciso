@@ -14,6 +14,17 @@ class ModelBitrix
                 "id" => $id,
             ]
         );
-        return $result;
+        return $result["result"];
+    }
+    protected function dataFields(string $FIELD_NAME)
+    {
+
+        $result = CRest::call(
+            "crm.company.userfield.list",
+            [
+                "FILTER[FIELD_NAME]" => $FIELD_NAME,
+            ]
+        );
+        return $result["result"][0]["LIST"];
     }
 }

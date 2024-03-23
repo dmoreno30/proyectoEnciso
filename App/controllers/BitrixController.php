@@ -16,16 +16,13 @@ class BitrixController extends ModelBitrix
 		$this->ModelBitrix = new ModelBitrix();
 	}
 
-	public function getDataDeal(int $id, string $entity)
+	public function getDataCRM(int $id, string $entity)
 	{
 		return $this->ModelBitrix->dataOfEntity($id, $entity);
 	}
-	public function getDataContact(int $id, string $entity)
+
+	public function infoField($FIELD_NAME)
 	{
-		return $this->ModelBitrix->dataOfEntity($id, $entity);
-	}
-	public function getDataCompany(int $id, string $entity)
-	{
-		return $this->ModelBitrix->dataOfEntity($id, $entity);
+		return $this->dataFields($FIELD_NAME);
 	}
 }

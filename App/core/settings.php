@@ -3,9 +3,10 @@
 //define('C_REST_CLIENT_SECRET','SakeVG5mbRdcQet45UUrt6q72AMTo7fkwXSO7Y5LYFYNCRsA6f');//Application key
 // or
 define('C_REST_WEB_HOOK_URL', 'https://corporativoenciso.bitrix24.es/rest/13/rsaw3wehw8156ceq/'); //url on creat Webhook
+define('API_ENCISO_URL', 'http://198.251.68.138:1951/api/crm/insert');
 
 //define('C_REST_CURRENT_ENCODING','windows-1251');
-define('C_REST_IGNORE_SSL', true);//turn off validate ssl by curl
+define('C_REST_IGNORE_SSL', true); //turn off validate ssl by curl
 //define('C_REST_LOG_TYPE_DUMP',true); //logs save var_export for viewing convenience
 //define('C_REST_BLOCK_LOG',true);//turn off default logs
 //define('C_REST_LOGS_DIR', __DIR__ .'/logs/'); //directory path to save the log
